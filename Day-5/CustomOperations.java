@@ -39,7 +39,7 @@ public class CustomOperations {
         Scanner scanner= new Scanner(System.in);
         String choice="y";
         do{
-            System.out.println("Enter your choice : \n1.add\n2.checkCust");
+            System.out.println("Enter your choice : \n1.add\n2.check");
             String ch=scanner.next();
             switch(ch){
                 case "1" ->add(hashset);
