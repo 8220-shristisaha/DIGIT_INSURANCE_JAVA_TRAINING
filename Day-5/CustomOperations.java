@@ -6,6 +6,11 @@ class Person{
     String name;
     int age;
 
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     @Override
     public int hashCode() {
         return super.hashCode();
@@ -20,16 +25,8 @@ class Person{
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 }
 
@@ -68,15 +65,15 @@ public class CustomOperations {
     }
 
     private static void add(HashSet<Person> hashset) {
-        Person person = new Person();
-        Scanner scanner= new Scanner(System.in);
 
+        Scanner scanner= new Scanner(System.in);
         System.out.println("Enter Name : ");
-        person.setName(scanner.next());
+        String name= scanner.next();
 
         System.out.println("Enter Age : ");
-        person.setAge(scanner.nextInt());
+        int age= scanner.nextInt();
 
+        Person person = new Person(name,age);
         hashset.add(person);
     }
 }
